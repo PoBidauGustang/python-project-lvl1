@@ -4,4 +4,4 @@ install:
 make lint:
 	poetry run flake8 brain_games
 
-.PHONY: install
+.PHONY: install make lint
