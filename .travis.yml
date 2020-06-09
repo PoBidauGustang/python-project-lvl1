@@ -2,7 +2,6 @@ language: python
 
 before_install:
   # make depends on poetry
-  - make
   - pip install poetry
 
 install:
