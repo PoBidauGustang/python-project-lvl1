@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Even game."""
-from brain_games import cli
 from brain_games import even
 
 

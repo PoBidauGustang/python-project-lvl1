@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PoBidauGustang_brain_games"
-version = "0.5.1"
+version = "0.5.2"
 description = ""
 authors = ["Vlad Threee <threeeyesvl@gmail.com>"]
 packages = [
