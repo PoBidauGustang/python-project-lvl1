@@ -4,8 +4,8 @@ from brain_games.games import code
 
 
 def main():
-    """Welcome to the Brain Games, play brain-even."""
-    code.game_even()
+    """Welcome to the Brain Games, play brain-calc."""
+    code.game_calc()
 
 
 if __name__ == '__main__':
