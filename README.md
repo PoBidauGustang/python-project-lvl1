@@ -7,3 +7,5 @@
 [![Build Status](https://travis-ci.com/PoBidauGustang/python-project-lvl1.svg?branch=master)](https://travis-ci.com/PoBidauGustang/python-project-lvl1)
 
 [![asciicast](https://asciinema.org/a/cdGd6m5h4cBwY3kQCJkePFocG.svg)](https://asciinema.org/a/cdGd6m5h4cBwY3kQCJkePFocG)
+
+[![asciicast](https://asciinema.org/a/8x5HCKKnzGfupIKGVe5C20OKp.svg)](https://asciinema.org/a/8x5HCKKnzGfupIKGVe5C20OKp)
