@@ -3,7 +3,7 @@ from random import choice, randint
 
 from brain_games.games import engine
 
-output1 = 'Your answer:'
+output1 = 'Your answer: '
 output2 = 'Correct!'
 output3 = "'{0}' is wrong answer"
 output4 = ";(. Correct answer was '{0}'."
