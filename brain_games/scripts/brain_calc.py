@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Even game."""
+"""Calculator game."""
 from brain_games.games import code
 
 

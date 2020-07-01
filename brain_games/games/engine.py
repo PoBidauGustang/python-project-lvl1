@@ -1,4 +1,6 @@
 """Game engine."""
+from random import randint
+
 import prompt
 
 
@@ -33,3 +35,14 @@ def gcd(arg1, arg2):
         arg2 = arg1 % arg2
         arg1 = var_help
     return arg1
+
+
+def progression():
+    """Progression().
+
+    Returns:
+        progress.
+    """
+    num = randint(1, 10)
+    progress = list(range(num, (10 * num) + 1, num))
+    return progress

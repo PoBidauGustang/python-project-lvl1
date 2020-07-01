@@ -3,11 +3,19 @@ from random import choice, randint
 
 from brain_games.games import engine
 
+output1 = 'Your answer:'
+output2 = 'Correct!'
+output3 = "'{0}' is wrong answer"
+output4 = ";(. Correct answer was '{0}'."
+output5 = "\nLet's try again, {0}!"
+output6 = 'Congratulations, {0}!'
+new_string = '\n'
+
 
 def game_even():
     """Answer 'yes' if number even otherwise answer 'no'."""
     engine.greetings()
-    print('Answer "yes" if number even otherwise answer "no".', end='\n\n')
+    print('Answer "yes" if number even otherwise answer "no".', new_string)
     name = engine.name_request()
     for iteration in (0, 1, 2):
         iteration += 1
@@ -17,23 +25,23 @@ def game_even():
         else:
             correct_answer = 'no'
         print('Question: {0}'.format(str(random_int)))
-        answer = input('Your answer: ')
-        if answer == correct_answer:
-            print('Correct!')
+        answer = input(output1)
+        if answer == str(correct_answer):
+            print(output2)
         else:
             print(
-                "'{0}' is wrong answer".format(answer),
-                ";(. Correct answer was '{0}'.".format(correct_answer),
-                "\nLet's try again, {0}!".format(name),
+                output3.format(answer),
+                output4.format(correct_answer),
+                output5.format(name),
             )
             return
-    print('Congratulations, {0}!'.format(name))
+    print(output6.format(name))
 
 
 def game_calc():
     """Answer result of the expression."""
     engine.greetings()
-    print('What is the result of the expression?', end='\n\n')
+    print('What is the result of the expression?', new_string)
     name = engine.name_request()
     for iteration in (0, 1, 2):
         iteration += 1
@@ -51,23 +59,23 @@ def game_calc():
             'Question: {0}'.format(str(rand_int1)),
             '{0} {1}'.format(rand_operator, str(rand_int2)),
         )
-        answer = input('Your answer: ')
-        if answer == correct_answer:
-            print('Correct!')
+        answer = input(output1)
+        if answer == str(correct_answer):
+            print(output2)
         else:
             print(
-                "'{0}' is wrong answer".format(answer),
-                ";(. Correct answer was '{0}'.".format(correct_answer),
-                "\nLet's try again, {0}!".format(name),
+                output3.format(answer),
+                output4.format(correct_answer),
+                output5.format(name),
             )
             return
-    print('Congratulations, {0}!'.format(name))
+    print(output6.format(name))
 
 
 def game_gcd():
     """Answer greatest common divisor of given numbers."""
     engine.greetings()
-    print('Find the greatest common divisor of given numbers.', end='\n\n')
+    print('Find the greatest common divisor of given numbers.', new_string)
     name = engine.name_request()
     for iteration in (0, 1, 2):
         iteration += 1
@@ -75,14 +83,39 @@ def game_gcd():
         rand_int2 = randint(1, 100)
         correct_answer = engine.gcd(rand_int1, rand_int2)
         print('Question: {0} {1}'.format(rand_int1, rand_int2))
-        answer = input('Your answer: ')
+        answer = input(output1)
         if answer == str(correct_answer):
-            print('Correct!')
+            print(output2)
         else:
             print(
-                "'{0}' is wrong answer".format(answer),
-                ";(. Correct answer was '{0}'.".format(correct_answer),
-                "\nLet's try again, {0}!".format(name),
+                output3.format(answer),
+                output4.format(correct_answer),
+                output5.format(name),
             )
             return
-    print('Congratulations, {0}!'.format(name))
+    print(output6.format(name))
+
+
+def game_progression():
+    """Answer missing number."""
+    engine.greetings()
+    print('What number is missing in the progression?', new_string)
+    name = engine.name_request()
+    for iteration in (0, 1, 2):
+        iteration += 1
+        progression = engine.progression()
+        replaced_num = randint(0, 9)
+        correct_answer = progression.pop(replaced_num)
+        progression.insert(replaced_num, '..')
+        print('Question: {0}'.format(' '.join(map(str, progression))))
+        answer = input(output1)
+        if answer == str(correct_answer):
+            print(output2)
+        else:
+            print(
+                output3.format(answer),
+                output4.format(correct_answer),
+                output5.format(name),
+            )
+            return
+    print(output6.format(name))
