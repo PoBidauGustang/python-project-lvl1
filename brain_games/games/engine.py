@@ -46,3 +46,20 @@ def progression():
     num = randint(1, 10)
     progress = list(range(num, (10 * num) + 1, num))
     return progress
+
+
+def prime(arg):
+    """Prime().
+
+    Args:
+        arg: The argument.
+
+    Returns:
+        prime_num.
+    """
+    if arg == 1:
+        return 'no'
+    for num in range(2, (arg // 2) + 1):
+        if arg % num == 0:
+            return 'no'
+    return 'yes'

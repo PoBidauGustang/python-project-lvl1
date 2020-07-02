@@ -1,8 +1,9 @@
 """Game even."""
-from random import choice, randint
+from random import choice, randint, randrange
 
 from brain_games.games import engine
 
+output0 = 'Question: {0}'
 output1 = 'Your answer: '
 output2 = 'Correct!'
 output3 = "'{0}' is wrong answer"
@@ -24,7 +25,7 @@ def game_even():
             correct_answer = 'yes'
         else:
             correct_answer = 'no'
-        print('Question: {0}'.format(str(random_int)))
+        print(output0.format(str(random_int)))
         answer = input(output1)
         if answer == str(correct_answer):
             print(output2)
@@ -56,7 +57,7 @@ def game_calc():
         else:
             correct_answer = str(rand_int1 * rand_int2)
         print(
-            'Question: {0}'.format(str(rand_int1)),
+            output0.format(str(rand_int1)),
             '{0} {1}'.format(rand_operator, str(rand_int2)),
         )
         answer = input(output1)
@@ -107,7 +108,30 @@ def game_progression():
         replaced_num = randint(0, 9)
         correct_answer = progression.pop(replaced_num)
         progression.insert(replaced_num, '..')
-        print('Question: {0}'.format(' '.join(map(str, progression))))
+        print(output0.format(' '.join(map(str, progression))))
+        answer = input(output1)
+        if answer == str(correct_answer):
+            print(output2)
+        else:
+            print(
+                output3.format(answer),
+                output4.format(correct_answer),
+                output5.format(name),
+            )
+            return
+    print(output6.format(name))
+
+
+def game_prime():
+    """Answer missing number."""
+    engine.greetings()
+    print('What number is missing in the progression?', new_string)
+    name = engine.name_request()
+    for iteration in (0, 1, 2):
+        iteration += 1
+        rand_num = randrange(1, 100, 2)
+        correct_answer = engine.prime(rand_num)
+        print(output0.format(rand_num))
         answer = input(output1)
         if answer == str(correct_answer):
             print(output2)
