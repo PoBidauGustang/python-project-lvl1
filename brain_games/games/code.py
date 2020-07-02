@@ -125,7 +125,11 @@ def game_progression():
 def game_prime():
     """Answer missing number."""
     engine.greetings()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".', new_string)
+    print(
+        'Answer "yes" if given number is prime. ',
+        'Otherwise answer "no".',
+        new_string,
+    )
     name = engine.name_request()
     for iteration in (0, 1, 2):
         iteration += 1
