@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Calculator game."""
-from brain_games.games import code
+from brain_games.games import calc
 
 
 def main():
     """Welcome to the Brain Games, play brain-calc."""
-    code.game_calc()
+    calc.game_calc()
 
 
 if __name__ == '__main__':
