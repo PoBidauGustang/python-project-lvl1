@@ -1,8 +1,12 @@
 [tool.poetry]
 name = "PoBidauGustang_brain_games"
-version = "1.0.2"
-description = ""
+version = "1.0.3"
+description = "My first puthon project, 'Brain games'"
 authors = ["Vlad Threee <threeeyesvl@gmail.com>"]
+repository = "https://test.pypi.org/project/pobidaugustang-brain-games/"
+classifiers=[
+    "Programming Language :: Python :: 3.8",
+]
 packages = [
     { include = "brain_games" },
 ]

@@ -1,4 +1,4 @@
-"""Game even."""
+"""Game prime."""
 from random import randrange
 
 from brain_games.games import engine

@@ -1,4 +1,4 @@
-"""Game even."""
+"""Game gcd."""
 from brain_games.games import engine
 
 

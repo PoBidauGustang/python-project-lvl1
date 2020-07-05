@@ -6,12 +6,12 @@
 
 [![Build Status](https://travis-ci.com/PoBidauGustang/python-project-lvl1.svg?branch=master)](https://travis-ci.com/PoBidauGustang/python-project-lvl1)
 
-[![asciicast](https://asciinema.org/a/cdGd6m5h4cBwY3kQCJkePFocG.svg)](https://asciinema.org/a/cdGd6m5h4cBwY3kQCJkePFocG)
+[![asciicast](https://asciinema.org/a/SP59DxFUjYQEXv2y3nEaBpJ1M.svg)](https://asciinema.org/a/SP59DxFUjYQEXv2y3nEaBpJ1M)
 
-[![asciicast](https://asciinema.org/a/8x5HCKKnzGfupIKGVe5C20OKp.svg)](https://asciinema.org/a/8x5HCKKnzGfupIKGVe5C20OKp)
+[![asciicast](https://asciinema.org/a/XKE8vkCRkGqHap5z0ptCgu2uW.svg)](https://asciinema.org/a/XKE8vkCRkGqHap5z0ptCgu2uW)
 
-[![asciicast](https://asciinema.org/a/Rpl6I7LwVd6XsddvBY9jAoJcJ.svg)](https://asciinema.org/a/Rpl6I7LwVd6XsddvBY9jAoJcJ)
+[![asciicast](https://asciinema.org/a/CoxfcrOR1LEABvhrEwm1vtdpG.svg)](https://asciinema.org/a/CoxfcrOR1LEABvhrEwm1vtdpG)
 
-[![asciicast](https://asciinema.org/a/iSfZ6AgdyjGHm47oVlE9VAgkp.svg)](https://asciinema.org/a/iSfZ6AgdyjGHm47oVlE9VAgkp)
+[![asciicast](https://asciinema.org/a/jGncsdmXoqs8SejxMGrpfoVov.svg)](https://asciinema.org/a/jGncsdmXoqs8SejxMGrpfoVov)
 
-[![asciicast](https://asciinema.org/a/wiprXzzlGanQo9jNYO1v5kEBr.svg)](https://asciinema.org/a/wiprXzzlGanQo9jNYO1v5kEBr)
+[![asciicast](https://asciinema.org/a/oH2nMHJYhMSRVW59cULee6WBG.svg)](https://asciinema.org/a/oH2nMHJYhMSRVW59cULee6WBG)
