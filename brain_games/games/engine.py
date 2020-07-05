@@ -88,3 +88,18 @@ def calc():
         '{0} {1}'.format(rand_operator, str(rand_int2)),
     )
     return correct_answer
+
+
+def even():
+    """Even().
+
+    Returns:
+        correct answer.
+    """
+    random_int = randint(0, 100)
+    if random_int % 2 == 0:
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
+    print('Question: {0}'.format(str(random_int)))
+    return correct_answer

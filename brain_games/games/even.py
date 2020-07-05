@@ -1,6 +1,4 @@
 """Game even."""
-from random import randint
-
 from brain_games.games import engine
 
 
@@ -11,12 +9,7 @@ def game_even():
     name = engine.name_request()
     for iteration in (0, 1, 2):
         iteration += 1
-        random_int = randint(0, 100)
-        if random_int % 2 == 0:
-            correct_answer = 'yes'
-        else:
-            correct_answer = 'no'
-        print('Question: {0}'.format(str(random_int)))
+        correct_answer = engine.even()
         answer = input('Your answer: ')
         if answer == str(correct_answer):
             print('Correct!')
