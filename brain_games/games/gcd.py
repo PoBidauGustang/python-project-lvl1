@@ -1,6 +1,4 @@
 """Game even."""
-from random import randint
-
 from brain_games.games import engine
 
 
@@ -11,10 +9,7 @@ def game_gcd():
     name = engine.name_request()
     for iteration in (0, 1, 2):
         iteration += 1
-        rand_int1 = randint(1, 100)
-        rand_int2 = randint(1, 100)
-        correct_answer = engine.gcd(rand_int1, rand_int2)
-        print('Question: {0} {1}'.format(rand_int1, rand_int2))
+        correct_answer = engine.gcd()
         answer = input('Your answer: ')
         if answer == str(correct_answer):
             print('Correct!')

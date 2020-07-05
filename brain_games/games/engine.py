@@ -1,5 +1,5 @@
 """Game engine."""
-from random import randint
+from random import choice, randint
 
 import prompt
 
@@ -20,32 +20,35 @@ def name_request():
     return name
 
 
-def gcd(arg1, arg2):
+def gcd():
     """Give gcd of two integers.
-
-    Args:
-        arg1: The first argument.
-        arg2: The second argument.
 
     Returns:
         grand_cd.
     """
-    while arg2 != 0:
-        var_help = arg2
-        arg2 = arg1 % arg2
-        arg1 = var_help
-    return arg1
+    rand_int1 = randint(1, 100)
+    rand_int2 = randint(1, 100)
+    print('Question: {0} {1}'.format(rand_int1, rand_int2))
+    while rand_int2 != 0:
+        var_help = rand_int2
+        rand_int2 = rand_int1 % rand_int2
+        rand_int1 = var_help
+    return rand_int1
 
 
 def progression():
     """Progression().
 
     Returns:
-        progress.
+        missing number.
     """
     num = randint(1, 10)
     progress = list(range(num, (10 * num) + 1, num))
-    return progress
+    replaced_num = randint(0, 9)
+    missing_number = progress.pop(replaced_num)
+    progress.insert(replaced_num, '..')
+    print('Question: {0}'.format(' '.join(map(str, progress))))
+    return missing_number
 
 
 def prime(arg):
@@ -63,3 +66,25 @@ def prime(arg):
         if arg % num == 0:
             return 'no'
     return 'yes'
+
+
+def calc():
+    """Calc().
+
+    Returns:
+        correct answer.
+    """
+    rand_int1 = randint(0, 100)
+    rand_int2 = randint(0, 100)
+    rand_operator = choice(['+', '-', '*'])
+    if rand_operator == '+':
+        correct_answer = str(rand_int1 + rand_int2)
+    elif rand_operator == '-':
+        correct_answer = str(rand_int1 - rand_int2)
+    else:
+        correct_answer = str(rand_int1 * rand_int2)
+    print(
+        'Question: {0}'.format(str(rand_int1)),
+        '{0} {1}'.format(rand_operator, str(rand_int2)),
+    )
+    return correct_answer

@@ -1,6 +1,4 @@
 """Game even."""
-from random import randint
-
 from brain_games.games import engine
 
 
@@ -11,11 +9,7 @@ def game_progression():
     name = engine.name_request()
     for iteration in (0, 1, 2):
         iteration += 1
-        progression = engine.progression()
-        replaced_num = randint(0, 9)
-        correct_answer = progression.pop(replaced_num)
-        progression.insert(replaced_num, '..')
-        print('Question: {0}'.format(' '.join(map(str, progression))))
+        correct_answer = engine.progression()
         answer = input('Your answer: ')
         if answer == str(correct_answer):
             print('Correct!')
