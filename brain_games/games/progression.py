@@ -1,23 +1,30 @@
 """Game progression."""
-from brain_games.games import engine
+from random import randint
+
+DISCRIPTION = 'What number is missing in the progression?\n'
 
 
-def game_progression():
-    """Answer missing number."""
-    engine.greetings()
-    print('What number is missing in the progression?', end='\n\n')
-    name = engine.name_request()
-    for iteration in (0, 1, 2):
-        iteration += 1
-        correct_answer = engine.progression()
-        answer = input('Your answer: ')
-        if answer == str(correct_answer):
-            print('Correct!')
-        else:
-            print(
-                "'{0}' is wrong answer".format(answer),
-                ";(. Correct answer was '{0}'.".format(correct_answer),
-                "\nLet's try again, {0}!".format(name),
-            )
-            return
-    print('Congratulations, {0}!'.format(name))
+def make_question():
+    """Question.
+
+    Returns:
+        Question, expected player`s answer.
+    """
+    expected_answer, prepared_question = correct_answer()
+    question = prepared_question
+    return (question, expected_answer)
+
+
+def correct_answer():
+    """Correct answer.
+
+    Returns:
+        Correct answer.
+    """
+    num = randint(1, 10)
+    progress = list(range(num, (10 * num) + 1, num))
+    replaced_num = randint(0, 9)
+    missing_number = progress.pop(replaced_num)
+    progress.insert(replaced_num, '..')
+    question = ('Question: {0}'.format(' '.join(map(str, progress))))
+    return (str(missing_number), question)

@@ -3,103 +3,62 @@ from random import choice, randint
 
 import prompt
 
-
-def greetings():
-    """Brain games greeting."""
-    print('Welcome to the Brain Games!')
+NUMBER_OF_ROUNDS = 3
 
 
-def name_request():
-    """Get an user name and promt user.
+def run(game):
+    """Run game.
+
+    Args:
+        game: Name of the game.
+    """
+    name = greetings(game.DISCRIPTION)
+    count_of_rounds = 0
+    while count_of_rounds < NUMBER_OF_ROUNDS:
+        question, correct_answer = game.make_question()
+        print(question)
+        answer = input('Your answer: ')
+        if answer == correct_answer:
+            print('Correct!')
+        else:
+            print(
+                "'{0}' is wrong answer".format(answer),
+                ";(. Correct answer was '{0}'.".format(correct_answer),
+                "\nLet's try again, {0}!".format(name),
+            )
+            return
+        count_of_rounds += 1
+    print('Congratulations, {0}!'.format(name))
+
+
+def generate_operator():
+    """Return random operator.
+
+    Returns:
+        Operator.
+    """
+    return choice(['+', '-', '*'])
+
+
+def generate_number():
+    """Return random number from range.
+
+    Returns:
+        End of loop.
+    """
+    return randint(1, 100)
+
+
+def greetings(rules):
+    """Brain games greeting. Get an user name and promt user.
+
+    Args:
+        rules: Discription of game`s rules.
 
     Returns:
         Name.
     """
+    print('Welcome to the Brain Games!\n{0}'.format(rules))
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!\n'.format(name))
     return name
-
-
-def gcd():
-    """Give gcd of two integers.
-
-    Returns:
-        grand_cd.
-    """
-    rand_int1 = randint(1, 100)
-    rand_int2 = randint(1, 100)
-    print('Question: {0} {1}'.format(rand_int1, rand_int2))
-    while rand_int2 != 0:
-        var_help = rand_int2
-        rand_int2 = rand_int1 % rand_int2
-        rand_int1 = var_help
-    return rand_int1
-
-
-def progression():
-    """Progression().
-
-    Returns:
-        missing number.
-    """
-    num = randint(1, 10)
-    progress = list(range(num, (10 * num) + 1, num))
-    replaced_num = randint(0, 9)
-    missing_number = progress.pop(replaced_num)
-    progress.insert(replaced_num, '..')
-    print('Question: {0}'.format(' '.join(map(str, progress))))
-    return missing_number
-
-
-def prime(arg):
-    """Prime().
-
-    Args:
-        arg: The argument.
-
-    Returns:
-        prime_num.
-    """
-    if arg == 1:
-        return 'no'
-    for num in range(2, (arg // 2) + 1):
-        if arg % num == 0:
-            return 'no'
-    return 'yes'
-
-
-def calc():
-    """Calc().
-
-    Returns:
-        correct answer.
-    """
-    rand_int1 = randint(0, 100)
-    rand_int2 = randint(0, 100)
-    rand_operator = choice(['+', '-', '*'])
-    if rand_operator == '+':
-        correct_answer = str(rand_int1 + rand_int2)
-    elif rand_operator == '-':
-        correct_answer = str(rand_int1 - rand_int2)
-    else:
-        correct_answer = str(rand_int1 * rand_int2)
-    print(
-        'Question: {0}'.format(str(rand_int1)),
-        '{0} {1}'.format(rand_operator, str(rand_int2)),
-    )
-    return correct_answer
-
-
-def even():
-    """Even().
-
-    Returns:
-        correct answer.
-    """
-    random_int = randint(0, 100)
-    if random_int % 2 == 0:
-        correct_answer = 'yes'
-    else:
-        correct_answer = 'no'
-    print('Question: {0}'.format(str(random_int)))
-    return correct_answer

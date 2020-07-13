@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "PoBidauGustang_brain_games"
-version = "1.0.3"
-description = "My first puthon project, 'Brain games'"
+version = "1.0.4"
+description = "My first python project, 'Brain games'"
 authors = ["Vlad Threee <threeeyesvl@gmail.com>"]
 repository = "https://test.pypi.org/project/pobidaugustang-brain-games/"
 classifiers=[
