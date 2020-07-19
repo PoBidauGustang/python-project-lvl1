@@ -1,5 +1,5 @@
 """Game gcd."""
-from brain_games.games import engine
+from brain_games import engine
 
 DISCRIPTION = 'Find the greatest common divisor of given numbers.\n'
 
@@ -10,9 +10,9 @@ def make_question():
     Returns:
         Question, expected player`s answer.
     """
-    num1 = engine.generate_number()
-    num2 = engine.generate_number()
-    question = ('Question: {0} {1}'.format(num1, num2))
+    num1 = engine.randint(1, 100)
+    num2 = engine.randint(1, 100)
+    question = ('{0} {1}'.format(num1, num2))
     expected_answer = correct_answer(num1, num2)
     return (question, expected_answer)
 

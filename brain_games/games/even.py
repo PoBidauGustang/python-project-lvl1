@@ -1,5 +1,5 @@
-"""Game even functions."""
-from brain_games.games import engine
+"""Game even."""
+from brain_games import engine
 
 DISCRIPTION = 'Answer "yes" if number even otherwise answer "no".\n'
 
@@ -10,19 +10,19 @@ def make_question():
     Returns:
         Question, expected player`s answer.
     """
-    random_int = engine.generate_number()
-    question = ('Question: {0}'.format(random_int))
-    expected_answer = correct_answer(random_int)
+    random_int = engine.randint(1, 100)
+    question = ('{0}'.format(random_int))
+    expected_answer = 'yes' if is_even(random_int) else 'no'
     return (question, expected_answer)
 
 
-def correct_answer(random_int):
-    """Correct answer.
+def is_even(random_int):
+    """Check if number is even or not.
 
     Args:
         random_int: Game`s object.
 
     Returns:
-        Correct answer.
+        Bool.
     """
-    return 'no' if random_int % 2 else 'yes'
+    return not bool if random_int % 2 else bool

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gcd game."""
+from brain_games.engine import run
 from brain_games.games import gcd
-from brain_games.games.engine import run
 
 
 def main():

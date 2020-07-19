@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prime game."""
+from brain_games.engine import run
 from brain_games.games import prime
-from brain_games.games.engine import run
 
 
 def main():

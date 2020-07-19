@@ -1,5 +1,7 @@
 """Game calculator."""
-from brain_games.games import engine
+from random import choice
+
+from brain_games import engine
 
 DISCRIPTION = 'What is the result of the expression?\n'
 
@@ -10,11 +12,11 @@ def make_question():
     Returns:
         Question, expected player`s answer.
     """
-    num1 = engine.generate_number()
-    num2 = engine.generate_number()
-    operation = engine.generate_operator()
-    question = ('Question: {0} {1} {2}'.format(num1, operation, num2))
-    expected_answer = correct_answer(num1, num2, operation)
+    num1 = engine.randint(1, 100)
+    num2 = engine.randint(1, 100)
+    operation = generate_operator()
+    question = ('{0} {1} {2}'.format(num1, operation, num2))
+    expected_answer = str(correct_answer(num1, num2, operation))
     return (question, expected_answer)
 
 
@@ -30,7 +32,16 @@ def correct_answer(num1, num2, operation):
         Correct answer.
     """
     if operation == '+':
-        return str(num1 + num2)
+        return num1 + num2
     elif operation == '-':
-        return str(num1 - num2)
-    return str(num1 * num2)
+        return num1 - num2
+    return num1 * num2
+
+
+def generate_operator():
+    """Return random operator.
+
+    Returns:
+        Operator.
+    """
+    return choice(['+', '-', '*'])

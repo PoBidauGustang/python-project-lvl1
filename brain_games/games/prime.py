@@ -1,5 +1,5 @@
 """Game prime."""
-from brain_games.games import engine
+from brain_games import engine
 
 DISCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
 
@@ -10,24 +10,24 @@ def make_question():
     Returns:
         Question, expected player`s answer.
     """
-    num = engine.generate_number()
-    question = ('Question: {0}'.format(num))
-    expected_answer = correct_answer(num)
+    random_int = engine.randint(1, 100)
+    question = ('{0}'.format(random_int))
+    expected_answer = 'yes' if is_prime(random_int) else 'no'
     return (question, expected_answer)
 
 
-def correct_answer(num):
-    """Correct answer.
+def is_prime(random_int):
+    """Check if number is prime or not.
 
     Args:
-        num: Number of game`s question.
+        random_int: Number of game`s question.
 
     Returns:
-        Correct answer.
+        Bool.
     """
-    if num == 1:
-        return 'no'
-    for integer in range(2, (num // 2) + 1):
-        if num % integer == 0:
-            return 'no'
-    return 'yes'
+    if random_int == 1:
+        return False
+    for integer in range(2, (random_int // 2) + 1):
+        if random_int % integer == 0:
+            return False
+    return True
