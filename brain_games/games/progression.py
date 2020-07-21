@@ -1,5 +1,5 @@
 """Game progression."""
-from brain_games.engine import randint
+from random import randint
 
 DISCRIPTION = 'What number is missing in the progression?\n'
 

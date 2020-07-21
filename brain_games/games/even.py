@@ -1,5 +1,5 @@
 """Game even."""
-from brain_games import engine
+from random import randint
 
 DISCRIPTION = 'Answer "yes" if number even otherwise answer "no".\n'
 
@@ -10,7 +10,7 @@ def make_question():
     Returns:
         Question, expected player`s answer.
     """
-    random_int = engine.randint(1, 100)
+    random_int = randint(1, 100)
     question = ('{0}'.format(random_int))
     expected_answer = 'yes' if is_even(random_int) else 'no'
     return (question, expected_answer)

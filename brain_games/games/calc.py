@@ -1,7 +1,5 @@
 """Game calculator."""
-from random import choice
-
-from brain_games import engine
+from random import choice, randint
 
 DISCRIPTION = 'What is the result of the expression?\n'
 
@@ -12,8 +10,8 @@ def make_question():
     Returns:
         Question, expected player`s answer.
     """
-    num1 = engine.randint(1, 100)
-    num2 = engine.randint(1, 100)
+    num1 = randint(1, 100)
+    num2 = randint(1, 100)
     operation = generate_operator()
     question = ('{0} {1} {2}'.format(num1, operation, num2))
     expected_answer = str(correct_answer(num1, num2, operation))

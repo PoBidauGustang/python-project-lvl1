@@ -1,6 +1,4 @@
 """Game engine."""
-from random import randint
-
 import prompt
 
 NUMBER_OF_ROUNDS = 3
@@ -30,9 +28,6 @@ def run(game):
             return
         count_of_rounds += 1
     print('Congratulations, {0}!'.format(name))
-
-
-random_num = randint(1, 100)
 
 
 def greetings_user():
