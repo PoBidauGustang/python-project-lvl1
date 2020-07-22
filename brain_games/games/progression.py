@@ -10,11 +10,11 @@ def make_question():
     Returns:
         Question, expected player`s answer.
     """
-    progress = make_progression()
+    progression = make_progression()
     replaced_num = randint(0, 9)
-    missing_number = progress.pop(replaced_num)
-    progress.insert(replaced_num, '..')
-    question = ('{0}'.format(' '.join(map(str, progress))))
+    missing_number = progression.pop(replaced_num)
+    progression.insert(replaced_num, '..')
+    question = ('{0}'.format(' '.join(map(str, progression))))
     return (question, str(missing_number))
 
 
@@ -25,5 +25,5 @@ def make_progression():
         Progression.
     """
     num = randint(1, 10)
-    progress = list(range(num, (10 * num) + 1, num))
-    return progress
+    progression = list(range(num, (10 * num) + 1, num))
+    return progression
