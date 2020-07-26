@@ -4,11 +4,11 @@ from random import randint
 DISCRIPTION = 'Answer "yes" if number even otherwise answer "no".\n'
 
 
-def make_question():
+def make_question_and_correct_answer():
     """Question.
 
     Returns:
-        Question, expected player`s answer.
+        Question; expected player`s answer.
     """
     random_int = randint(1, 100)
     question = ('{0}'.format(random_int))
@@ -25,4 +25,4 @@ def is_even(random_int):
     Returns:
         Bool.
     """
-    return not bool if random_int % 2 else bool
+    return random_int % 2 == 0

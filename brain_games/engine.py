@@ -11,10 +11,11 @@ def run(game):
         game: Name of the game.
     """
     print('Welcome to the Brain Games!\n{0}'.format(game.DISCRIPTION))
-    name = greetings_user()
+    name = greet_user()
+    print('Hello, {0}!\n'.format(name))
     count_of_rounds = 0
     while count_of_rounds < NUMBER_OF_ROUNDS:
-        question, correct_answer = game.make_question()
+        question, correct_answer = game.make_question_and_correct_answer()
         print('Question: {0}'.format(question))
         answer = input('Your answer: ')
         if answer == correct_answer:
@@ -30,12 +31,11 @@ def run(game):
     print('Congratulations, {0}!'.format(name))
 
 
-def greetings_user():
-    """Brain games greeting. Get an user name and promt user.
+def greet_user():
+    """Ask user for a name.
 
     Returns:
         Name.
     """
     name = prompt.string('May I have your name? ')
-    print('Hello, {0}!\n'.format(name))
     return name

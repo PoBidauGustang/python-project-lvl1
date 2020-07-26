@@ -4,11 +4,11 @@ from random import randint
 DISCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
 
 
-def make_question():
+def make_question_and_correct_answer():
     """Question.
 
     Returns:
-        Question, expected player`s answer.
+        Question; expected player`s answer.
     """
     random_int = randint(1, 100)
     question = ('{0}'.format(random_int))
@@ -25,7 +25,7 @@ def is_prime(random_int):
     Returns:
         Bool.
     """
-    if random_int == 1:
+    if random_int <= 1:
         return False
     for integer in range(2, (random_int // 2) + 1):
         if random_int % integer == 0:
