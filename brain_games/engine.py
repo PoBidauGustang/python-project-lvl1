@@ -37,5 +37,4 @@ def greet_user():
     Returns:
         Name.
     """
-    name = prompt.string('May I have your name? ')
-    return name
+    return prompt.string('May I have your name? ')
