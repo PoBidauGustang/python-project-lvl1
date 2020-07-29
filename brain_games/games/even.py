@@ -1,7 +1,7 @@
 """Game even."""
 from random import randint
 
-DISCRIPTION = 'Answer "yes" if number even otherwise answer "no".\n'
+DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def make_question_and_correct_answer():

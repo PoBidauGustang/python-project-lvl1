@@ -1,7 +1,7 @@
 """Game prime."""
 from random import randint
 
-DISCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def make_question_and_correct_answer():

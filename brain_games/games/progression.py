@@ -1,7 +1,7 @@
 """Game progression."""
-from random import randint
+from random import choice, randint
 
-DISCRIPTION = 'What number is missing in the progression?\n'
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def make_question_and_correct_answer():
@@ -10,24 +10,25 @@ def make_question_and_correct_answer():
     Returns:
         Question; expected player`s answer.
     """
-    num1 = randint(1, 10)
-    progression = make_progression(num1)
-    replaced_num = randint(0, 9)
-    missing_number = progression.pop(replaced_num)
-    progression.insert(replaced_num, '..')
-    question = ('{0}'.format(' '.join(map(str, progression))))
-    return (question, str(missing_number))
+    start_num, delta = randint(1, 10), randint(1, 10)
+    progression = make_progression(start_num, delta)
+    missing_number = choice(progression)
+    formatted_progression = ' '.join([
+        '..' if num == missing_number else str(num) for num in progression
+    ])
+    return (('{0}'.format(formatted_progression)), str(missing_number))
 
 
-def make_progression(num1):
+def make_progression(start_num, delta):
     """Generate arithemtic progression.
 
     Args:
-        num1: First number of progression.
+        start_num: First number of progression.
+        delta: Progression step
 
     Returns:
         Progression.
     """
-    num_elements = 10
-    progression = list(range(num1, (num_elements * num1) + 1, num1))
+    length = 10
+    progression = list(range(start_num, (length * delta) + start_num, delta))
     return progression

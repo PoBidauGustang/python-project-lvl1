@@ -1,8 +1,8 @@
 """Game calculator."""
-from operator import mul
+from operator import add, mul, sub
 from random import choice, randint
 
-DISCRIPTION = 'What is the result of the expression?\n'
+DESCRIPTION = 'What is the result of the expression?'
 
 
 def make_question_and_correct_answer():
@@ -15,11 +15,11 @@ def make_question_and_correct_answer():
     num2 = randint(1, 100)
     operator = generate_operator()
     question = ('{0} {1} {2}'.format(num1, operator, num2))
-    expected_answer = str(find_correct_answer(num1, num2, operator))
+    expected_answer = str(calculate(num1, num2, operator))
     return (question, expected_answer)
 
 
-def find_correct_answer(num1, num2, operator):
+def calculate(num1, num2, operator='*'):
     """Find correct answer.
 
     Args:
@@ -31,9 +31,9 @@ def find_correct_answer(num1, num2, operator):
         Correct answer.
     """
     if operator == '+':
-        return num1 + num2
+        return add(num1, num2)
     elif operator == '-':
-        return num1 - num2
+        return sub(num1, num2)
     return mul(num1, num2)
 
 
