@@ -19,7 +19,7 @@ def make_question_and_correct_answer():
     return (question, expected_answer)
 
 
-def calculate(num1, num2, operator='*'):
+def calculate(num1, num2, operator=mul):
     """Find correct answer.
 
     Args:

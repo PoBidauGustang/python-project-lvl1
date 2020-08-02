@@ -1,4 +1,5 @@
 """Game prime."""
+from math import sqrt
 from random import randint
 
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
@@ -27,7 +28,7 @@ def is_prime(random_int):
     """
     if random_int <= 1:
         return False
-    for integer in range(2, (random_int // 2) + 1):
+    for integer in range(2, int(sqrt(random_int)) + 1):
         if random_int % integer == 0:
             return False
     return True
