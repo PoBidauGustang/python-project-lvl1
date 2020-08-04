@@ -19,7 +19,7 @@ def make_question_and_correct_answer():
     return (question, expected_answer)
 
 
-def calculate(num1, num2, operator=mul):
+def calculate(num1, num2, operator):
     """Find correct answer.
 
     Args:
@@ -34,7 +34,8 @@ def calculate(num1, num2, operator=mul):
         return add(num1, num2)
     elif operator == '-':
         return sub(num1, num2)
-    return mul(num1, num2)
+    elif operator == '*':
+        return mul(num1, num2)
 
 
 def generate_operator():

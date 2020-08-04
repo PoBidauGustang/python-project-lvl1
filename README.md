@@ -31,7 +31,7 @@ Here you can see demos of installing and running games of the project:
 Pip - The Python Package Installer. You can use pip to install packages from the Python Package Index and other indexes. (https://pypi.org/project/pip/)
 
 ### 2. Installing:
-For installing Brain-game you need to enter to the command line: “pip install -i https://test.pypi.org/simple/ pobidaugustang-brain-games==1.0.11”.
+For installing Brain-game you need to enter to the command line: “pip install -i https://test.pypi.org/simple/ pobidaugustang-brain-games==1.0.12”.
 
 ### 3. Launch:
 Enter “game_name”. Instead of “game_name” you need to type the name of the game you need. For example, brain-even.

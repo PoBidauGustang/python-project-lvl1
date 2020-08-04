@@ -16,13 +16,13 @@ def make_question_and_correct_answer():
     return (question, expected_answer)
 
 
-def is_even(random_int):
+def is_even(integer):
     """Check if number is even or not.
 
     Args:
-        random_int: Game`s object.
+        integer: Game`s object.
 
     Returns:
         Bool.
     """
-    return random_int % 2 == 0
+    return integer % 2 == 0

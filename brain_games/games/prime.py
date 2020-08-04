@@ -17,18 +17,18 @@ def make_question_and_correct_answer():
     return (question, expected_answer)
 
 
-def is_prime(random_int):
+def is_prime(integer):
     """Check if number is prime or not.
 
     Args:
-        random_int: Number of game`s question.
+        integer: Number of game`s question.
 
     Returns:
         Bool.
     """
-    if random_int <= 1:
+    if integer <= 1:
         return False
-    for integer in range(2, int(sqrt(random_int)) + 1):
-        if random_int % integer == 0:
+    for num in range(2, int(sqrt(integer)) + 1):
+        if integer % num == 0:
             return False
     return True
